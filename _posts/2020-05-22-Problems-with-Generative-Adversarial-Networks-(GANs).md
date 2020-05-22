@@ -20,7 +20,7 @@ GANs suffer from three major problems[^3][^4]:
    > Visualised example of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
    >
-   > More generally, can be visualised as[^11]:
+   > More generally, can be visualised as[^3]:
    >![image-20200522214443158](../assets/image-20200522214443158.png)
 
 2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
@@ -52,7 +52,7 @@ When IMLE combined with a different method (called *GLO*[^8]), the combined mode
 
 [^1]: https://en.wikipedia.org/wiki/Generative_adversarial_network
 [^2]: https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900
-[^3]: "Overcoming the Curse of Dimensionality and Mode Collapse" talk, Ke Li, https://youtu.be/lO4HDchiegY
+[^3]: "Overcoming the Curse of Dimensionality and Mode Collapse" talk, Ke Li, https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view and https://youtu.be/lO4HDchiegY
 [^4]: https://medium.com/@jonathan_hui/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
 [^5]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, https://arxiv.org/abs/1811.12402
 [^6]: https://developers.google.com/machine-learning/gan/problems
@@ -60,4 +60,3 @@ When IMLE combined with a different method (called *GLO*[^8]), the combined mode
 [^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., https://arxiv.org/abs/1707.05776
 [^9]:Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors, Yedid Hoshen & Jitendra Malik, https://arxiv.org/abs/1812.08985
 [^10]:GLANN pytorch implementation, Yedid Hoshen, https://github.com/yedidh/glann
-[^11]: "Overcoming Mode Collapse and the Curse of Dimensionality" presentation, Ke Li, https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view
