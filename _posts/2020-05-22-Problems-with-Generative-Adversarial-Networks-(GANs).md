@@ -21,7 +21,10 @@ GANs suffer from 3 major problems[^3][^4]:
 
 In the following post we will see why mode dropping may happen.
 
-![image-20200522214058988](../assets/image-20200522214058988.png)
+> ![image-20200522214058988](../assets/image-20200522214058988.png)
+>
+> More generally, can be visualised as[^11]:
+> ![image-20200522214443158](../assets/image-20200522214443158.png)
 
 ## Solutions
 
@@ -54,3 +57,4 @@ When IMLE combined with a different method (called GLO[^8]), the combined model,
 [^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., https://arxiv.org/abs/1707.05776
 [^9]:Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors, Yedid Hoshen & Jitendra Malik, https://arxiv.org/abs/1812.08985
 [^10]:GLANN pytorch implementation, Yedid Hoshen, https://github.com/yedidh/glann
+[^11]: "Overcoming Mode Collapse and the Curse of Dimensionality" presentation, Ke Li, https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view
