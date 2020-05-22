@@ -3,17 +3,15 @@ layout: post
 title: "Problems with Generative Adversarial Networks (GANs)"
 date: May 22, 2020
 comments: true
-permalink: short-urls-jekyll
+permalink: gans-problems
 typora-copy-images-to: ../assets
 ---
 
-Since GANs where first discovered in 2014[^1], new implementations, methods and discoveries led to amazing improvements in the ability to generate high quality synthesised samples. For example, in images GANs succeeded to synthesise high-resolution photorealistic images and inspiring style-transfer results[^2]. Despite their popularity, **we all should think twice before choosing to use it**.
+Since GANs where first discovered in 2014[^1], new implementations, methods and discoveries led to amazing improvements in the ability to generate high quality synthesised samples. For example, in computer vision, GANs succeeded to synthesise high-resolution photorealistic images and inspiring style-transfer results[^2]. Despite their popularity, **we all should think twice before choosing to use it**.
 
 <img src="../assets/1200px-Achtung.svg.png" alt="Danger - Simple English Wikipedia, the free encyclopedia" style="zoom: 25%;" />
 
-## Introduction
-
-### Problems
+## Problems
 
 GANs suffer from 3 major problems[^3][^4]:
 
@@ -23,15 +21,15 @@ GANs suffer from 3 major problems[^3][^4]:
 
 In the following post we will see why mode dropping may happen.
 
-### Solutions
+## Solutions
 
-#### A first step towards a real competitive solution
+### A first step towards a real competitive solution
 
 In the following post, we will first introduce a method from 2018 that solve all three problems mentioned above, named *Implicit Maximum Likelihood Estimation (IMLE)*[^7], but unfortunately in practice synthesises blurry images.
 
-#### A real competitive solution
+### A real competitive solution
 
-When IMLE combined with a different method (named GLO[^8]), the combined model (named GLANN) empirically has been shown to outperform a baseline consisting of 800 GANs and VAEs on commonly used datasets[^9][^10].
+When IMLE combined with a different method (called GLO[^8]), the combined model, named GLANN, empirically has been shown to outperform a baseline consisting of 800 GANs and VAEs on commonly used datasets[^9][^10].
 
 > Examples for GANs generated results. Although we get high-resolution photorealistic synthesised images, we might suffer from mode dropping and a challenging unreproducible training process.
 >
