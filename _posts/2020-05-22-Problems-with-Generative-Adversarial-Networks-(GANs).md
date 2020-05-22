@@ -37,7 +37,7 @@ In the following post, we will first introduce a method from 2018 that solves al
 
 ### A real competitive solution
 
-When IMLE is combined with a different method (called *GLO*[^8]), the combined model, named ***GLANN***, empirically has been shown to outperform a baseline consisting of 800 GANs and VAEs on commonly used datasets[^9][^10].
+When IMLE is combined with a different method called *GLO*[^8], the combined model, named ***GLANN***, empirically has been shown to outperform a baseline consisting of 800 GANs and VAEs on commonly used datasets[^9][^10].
 
 > Examples of GANs generated results. Although we get high-resolution photorealistic synthesised images, we might suffer from mode dropping and a challenging unreproducible training process.
 >
