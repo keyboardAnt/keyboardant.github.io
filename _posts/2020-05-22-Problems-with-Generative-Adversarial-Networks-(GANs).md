@@ -17,9 +17,11 @@ GANs suffer from 3 major problems[^3][^4]:
 
 * *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a limited variety of the desired outputs verity, and ignore modes of the underlying true data distribution. For example, if we want to synthesise new images of vehicles, and use a training dataset of (1) motorcycles, (2) trucks, and (3) buses; the GAN might generate only (or almost only) images of (1) motorcycles and (2) trucks (i.e. "drop" the (3) buses images examples).
 * *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
-* *Training instability*: Adversarial settings is a [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible.
+* *Training instability*: Adversarial settings requires [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible.
 
 In the following post we will see why mode dropping may happen.
+
+![image-20200522214058988](../assets/image-20200522214058988.png)
 
 ## Solutions
 
