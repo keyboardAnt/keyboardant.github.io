@@ -16,12 +16,12 @@ Since GANs were first introduced in 2014[^1], new implementations, methods and d
 GANs suffer from three major problems[^3][^4]:
 
 1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a limited variety of the desired outputs verity, and ignore modes of the underlying true data distribution.
-> Visualised example of **mode dropping**:
->
-> ![image-20200522215210097](../assets/image-20200522215210097.png) 
->
-> More generally, can be visualised as[^11]:
-> ![image-20200522214443158](../assets/image-20200522214443158.png)
+
+   > Visualised example of **mode dropping**:
+   > ![image-20200522215210097](../assets/image-20200522215210097.png) 
+   >
+   > More generally, can be visualised as[^11]:
+   >![image-20200522214443158](../assets/image-20200522214443158.png)
 
 2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
 
