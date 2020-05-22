@@ -9,22 +9,22 @@ highlighter:         true
 permalink:        pretty
 
 # Setup
-title:            Joshua Lande
-tagline:          'Data Science, Apache Pig, Hadoop, Blogging, Tweets, Astrophysics'
-url:              http://www.joshualande.com
-shorturl:         joshualande.com
+title:            keyboardAnt
+tagline:          'Stuff'
+url:              https://keyboardant.github.io/
+#shorturl:         joshualande.com
 
 author:
-  name:           'Joshua Lande'
-  url:            https://twitter.com/joshualande
+  name:           'keyboardAnt'
+  url:            https://twitter.com/keyboardAnt
 
 paginate:         1
 
 # Custom vars
-version:          1.0.0
+version:          0.1
 
 github:
-  repo:           github.com/joshualande/joshualande.github.io
+  repo:           github.com/keyboardAnt/keyboardAnt.github.io
 
 # This is the list of pages to include in the header of the website.
 pages_list:       
