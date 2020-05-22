@@ -25,7 +25,7 @@ In the following post we will see why mode dropping may happen.
 
 ### A first step towards a real competitive solution
 
-In the following post, we will first introduce a method from 2018 that solve all three problems mentioned above, named *Implicit Maximum Likelihood Estimation (IMLE)*[^7], but unfortunately in practice synthesises blurry images.
+In the following post, we will first introduce a method from 2018 that solve all three problems mentioned above, named *Implicit Maximum Likelihood Estimation (IMLE)*[^7], but unfortunately in practice synthesises blurry images[^9].
 
 ### A real competitive solution
 
@@ -52,5 +52,3 @@ When IMLE combined with a different method (called GLO[^8]), the combined model,
 [^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., https://arxiv.org/abs/1707.05776
 [^9]:Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors, Yedid Hoshen & Jitendra Malik, https://arxiv.org/abs/1812.08985
 [^10]:GLANN pytorch implementation, Yedid Hoshen, https://github.com/yedidh/glann
-[^11]:
-[^12]:
