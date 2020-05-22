@@ -45,7 +45,7 @@ When IMLE combined with a different method (called GLO[^8]), the combined model,
 > <img src="../assets/1*k0saXyvLxLlvamYFbussUA.gif" alt="img" style="zoom:50%;" />
 > [pix2pixHD](https://tcwang0509.github.io/pix2pixHD/)
 
-## Key resources
+## References
 
 * "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, https://arxiv.org/abs/1811.12402
 
