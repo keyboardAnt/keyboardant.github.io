@@ -33,7 +33,7 @@ In the following post we will see *why* mode dropping may happen.
 
 ### A first step towards a real competitive solution
 
-In the following post, we will first introduce a method from 2018 that solve all three problems mentioned above, named *Implicit Maximum Likelihood Estimation (IMLE)*[^7], but unfortunately in practice synthesises blurry images[^9].
+In the following post, we will first introduce a method from 2018 that solves all three problems mentioned above, but unfortunately in practice synthesises blurry images[^9]. This method is named *Implicit Maximum Likelihood Estimation (IMLE)*[^7].
 
 ### A real competitive solution
 
