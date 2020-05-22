@@ -21,7 +21,9 @@ GANs suffer from 3 major problems[^3][^4]:
 
 In the following post we will see why mode dropping may happen.
 
-> ![image-20200522214058988](../assets/image-20200522214058988.png)
+> Visualised example for **mode dropping**:
+>
+> ![image-20200522215210097](../assets/image-20200522215210097.png) 
 >
 > More generally, can be visualised as[^11]:
 > ![image-20200522214443158](../assets/image-20200522214443158.png)
