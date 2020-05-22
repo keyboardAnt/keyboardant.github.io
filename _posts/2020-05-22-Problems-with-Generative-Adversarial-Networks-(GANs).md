@@ -15,7 +15,7 @@ Since GANs were first introduced in 2014[^1], new implementations, methods and d
 
 GANs suffer from three major problems[^3][^4]:
 
-1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a limited subset of the desired outputs variety, and ignore modes of the underlying true data distribution.
+1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, and ignore modes of the underlying true data distribution.
 
    > Visualised example of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
