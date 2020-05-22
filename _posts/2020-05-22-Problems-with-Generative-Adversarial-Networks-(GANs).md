@@ -25,7 +25,7 @@ GANs suffer from three major problems[^3][^4]:
 
 2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
 
-3. *Training instability*: Adversarial settings requires [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
+3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
 
 In the following post we will see *why* mode dropping may happen.
 
