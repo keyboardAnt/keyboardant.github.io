@@ -13,7 +13,7 @@ typora-copy-images-to: ../assets
 
 GLANN has first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
 
->A benchmark shows empirically its superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
+>A benchmark shows empirically GLANN's superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
 >
 >![image-20200523132812272](../assets/image-20200523132812272.png)
 >
