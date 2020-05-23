@@ -27,7 +27,9 @@ GLANN has first introduced on December 2018, in a paper by Yedid Hoshen and Jite
 
 <u>Table of contents:</u>
 
-[TOC]
+\* TOC
+
+{:toc}
 
 ## Introduction
 
