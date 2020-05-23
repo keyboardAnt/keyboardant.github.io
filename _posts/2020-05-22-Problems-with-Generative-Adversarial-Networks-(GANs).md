@@ -1,17 +1,41 @@
 ---
 layout: post
-title: "Problems with Generative Adversarial Networks (GANs)"
+title: "What is GLANN?"
 date: May 22, 2020
 comments: true
-permalink: gans-problems
+permalink: glann
 typora-copy-images-to: ../assets
 ---
+
+
+
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). In December 2018 it has been shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from mode dropping (mode collapse) like GANs, and is trained *without* adversarial, which makes the training process more stable than GANs.
+
+GLANN has first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
+
+>A benchmark presented in GLANN's paper:
+>
+>![image-20200523132812272](../assets/image-20200523132812272.png)
+>
+>Quality high-resolution outputs of GLANN:
+>
+>![image-20200523134153792](../assets/image-20200523134153792.png)
+>
+>GLANN works for various tasks:
+>
+>![image-20200523134234853](../assets/image-20200523134234853.png)
+
+<u>Table of contents:</u>
+
+[TOC]
+
+## Introduction
+
+### Problems with Generative Adversarial Networks (GANs)
 
 Since GANs were first introduced in 2014[^1], new implementations, methods and discoveries led to amazing improvements in the ability to generate high quality synthesised samples. For example, in computer vision, GANs succeeded to synthesise high-resolution photorealistic images and inspiring style-transfer results[^2]. Despite their popularity, **we all should think twice before choosing to use it**.
 
 <img src="../assets/1200px-Achtung.svg.png" alt="Danger - Simple English Wikipedia, the free encyclopedia" style="zoom: 25%;" />
-
-## Problems
 
 GANs suffer from three major problems[^3][^4]:
 
@@ -29,13 +53,13 @@ GANs suffer from three major problems[^3][^4]:
 
 In the following post we will see *why* mode dropping may happen.
 
-## Solutions
+### Solutions
 
-### A first step towards a real competitive solution
+#### A first step towards a real competitive solution (IMLE)
 
 In the following post, we will first introduce a method from 2018 that solves all three problems mentioned above, but unfortunately in practice synthesises blurry images[^9]. This method is named *Implicit Maximum Likelihood Estimation (IMLE)*[^7].
 
-### A real competitive solution
+#### A real competitive solution (GLANN)
 
 When IMLE is combined with a different method called *GLO*[^8], the combined model, named ***GLANN***, empirically has been shown to outperform a baseline consisting of 800 GANs and VAEs on commonly used datasets[^9][^10].
 
@@ -46,17 +70,33 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 > <img src="../assets/1*k0saXyvLxLlvamYFbussUA.gif" alt="img" style="zoom:50%;" />
 > [pix2pixHD](https://tcwang0509.github.io/pix2pixHD/)
 
+## Why GANs suffer from mode collapse?
+
+
+
+## What is IMLE?
+
+
+
+## What is GLO?
+
+
+
+## What is GLANN?
+
+
+
 ## References
 
-* "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, https://arxiv.org/abs/1811.12402
+* "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
 
-[^1]: https://en.wikipedia.org/wiki/Generative_adversarial_network
-[^2]: https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900
-[^3]: "Overcoming the Curse of Dimensionality and Mode Collapse" talk, Ke Li, https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view and https://youtu.be/lO4HDchiegY
-[^4]: https://medium.com/@jonathan_hui/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
-[^5]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, https://arxiv.org/abs/1811.12402
-[^6]: https://developers.google.com/machine-learning/gan/problems
-[^7]: "Implicit Maximum Likelihood Estimation", Ke Li and Jitendra Malik, https://arxiv.org/abs/1809.09087
-[^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., https://arxiv.org/abs/1707.05776
-[^9]:Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors, Yedid Hoshen & Jitendra Malik, https://arxiv.org/abs/1812.08985
-[^10]:GLANN pytorch implementation, Yedid Hoshen, https://github.com/yedidh/glann
+[^1]: "Generative adversarial network", Wikipedia, [https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)
+[^2]: "Some cool applications of GAN" blogpost, Jonathan Hui, [https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900](https://medium.com/@jonathan_hui/gan-some-cool-applications-of-gans-4c9ecca35900)
+[^3]: "Overcoming the Curse of Dimensionality and Mode Collapse", Ke Li, [https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view](https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view) and [https://youtu.be/lO4HDchiegY](https://youtu.be/lO4HDchiegY)
+[^4]: "Why it is so hard to train Generative Adversarial Networks" blogpost, Jonathan Hui, [https://medium.com/@jonathan_hui/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b](https://medium.com/@jonathan_hui/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b)
+[^5]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
+[^6]: "Common Problems" of real world GANS, Google developers' Machine Learning Crash Course, [https://developers.google.com/machine-learning/gan/problems](https://developers.google.com/machine-learning/gan/problems)
+[^7]: "Implicit Maximum Likelihood Estimation", Ke Li and Jitendra Malik, [https://arxiv.org/abs/1809.09087](https://arxiv.org/abs/1809.09087)
+[^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., [https://arxiv.org/abs/1707.05776](https://arxiv.org/abs/1707.05776)
+[^9]:"Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors", Yedid Hoshen and Jitendra Malik, [https://arxiv.org/abs/1812.08985](https://arxiv.org/abs/1812.08985)
+[^10]:GLANN implementation in PyTorch, Yedid Hoshen, [https://github.com/yedidh/glann](https://github.com/yedidh/glann)
