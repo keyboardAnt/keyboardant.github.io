@@ -9,7 +9,7 @@ typora-copy-images-to: ../assets
 
 
 
-***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). On December 2018 it was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from *mode dropping* (mode collapse) like GANs, and is trained without adversarial, which makes the training process simpler and more *stable* than GANs.
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). On December 2018 it was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](#Why-GANs-suffer-from-mode-collapse), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs.
 
 GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
 
@@ -35,8 +35,7 @@ Since GANs were first introduced in 2014[^1], new implementations, methods and d
 
 GANs suffer from three major problems[^3][^4]:
 
-#### 1. Mode dropping
-AKA *mode collapse*. In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.[^5]
+1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.
 
    > Visualised example of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
@@ -44,11 +43,9 @@ AKA *mode collapse*. In practice GANs might generate only a proper subset of the
    > More generally, can be visualised as[^3]:
    >![image-20200522214443158](../assets/image-20200522214443158.png)
 
-#### 2. Vanishing gradients
-Gradient becomes near zero when the discriminator is powerful.[^6]
+2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
 
-#### 3. Training instability
-Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
+3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
 
 In the following post we will see *why* mode dropping may happen.
 
