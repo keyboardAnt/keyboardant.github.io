@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "What is GLANN?"
+permalink: what-is-glann
 date: May 22, 2020
+toc: true
 comments: true
-permalink: glann
 typora-copy-images-to: ../assets
 ---
 
@@ -26,8 +27,6 @@ GLANN has first introduced on December 2018, in a paper by Yedid Hoshen and Jite
 >![image-20200523134234853](../assets/image-20200523134234853.png)
 
 <u>Table of contents:</u>
-
-\* TOC
 
 {:toc}
 
