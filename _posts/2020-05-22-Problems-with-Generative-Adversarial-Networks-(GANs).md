@@ -9,11 +9,11 @@ typora-copy-images-to: ../assets
 
 
 
-***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). On December 2018 it has been shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from *mode dropping* (mode collapse) like GANs, and is trained without adversarial, which makes the training process simpler and more *stable* than GANs.
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). On December 2018 it was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from *mode dropping* (mode collapse) like GANs, and is trained without adversarial, which makes the training process simpler and more *stable* than GANs.
 
-GLANN has first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
+GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
 
->A benchmark shows empirically GLANN's superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
+>Empirical benchmark showed GLANN's superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
 >
 >![image-20200523132812272](../assets/image-20200523132812272.png)
 >
