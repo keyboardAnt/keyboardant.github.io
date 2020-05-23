@@ -11,7 +11,7 @@ typora-copy-images-to: ../assets
 
 ***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](#why-gans-suffer-from-mode-collapse), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. GLANN is a combination of [GLO](what-is-glo) and [IMLE](what-is-imle).
 
-GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik; Later, with an additional author, Ke Li, it got published in CVPR 2019[^9][^10].
+GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik[^9]; Later, with an additional author, Ke Li, it got published in CVPR 2019[^11].
 
 >Empirical benchmark showed GLANN's superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
 >
@@ -96,3 +96,4 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 [^8]:"Optimizing the Latent Space of Generative Networks", Bojanowski et al., [https://arxiv.org/abs/1707.05776](https://arxiv.org/abs/1707.05776)
 [^9]:"Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors", Yedid Hoshen and Jitendra Malik, [https://arxiv.org/abs/1812.08985](https://arxiv.org/abs/1812.08985)
 [^10]:GLANN implementation in PyTorch, Yedid Hoshen, [https://github.com/yedidh/glann](https://github.com/yedidh/glann)
+[^11]: "Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors", Yedid Hoshen, Ke Li and Jitendra Malik, [http://openaccess.thecvf.com/content_CVPR_2019/papers/Hoshen_Non-Adversarial_Image_Synthesis_With_Generative_Latent_Nearest_Neighbors_CVPR_2019_paper.pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Hoshen_Non-Adversarial_Image_Synthesis_With_Generative_Latent_Nearest_Neighbors_CVPR_2019_paper.pdf)
