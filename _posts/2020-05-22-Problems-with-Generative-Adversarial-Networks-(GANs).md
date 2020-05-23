@@ -37,7 +37,7 @@ GANs suffer from three major problems[^3][^4]:
 
 1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.
 
-   > Visualised example of **mode dropping**:
+   > Visualised explanation of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
    >
    > More generally, can be visualised as[^3]:
