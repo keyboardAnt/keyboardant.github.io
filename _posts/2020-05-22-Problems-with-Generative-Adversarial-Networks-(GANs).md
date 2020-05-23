@@ -35,7 +35,8 @@ Since GANs were first introduced in 2014[^1], new implementations, methods and d
 
 GANs suffer from three major problems[^3][^4]:
 
-1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.
+#### 1. Mode dropping
+AKA *mode collapse*. In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.[^5]
 
    > Visualised example of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
@@ -43,9 +44,11 @@ GANs suffer from three major problems[^3][^4]:
    > More generally, can be visualised as[^3]:
    >![image-20200522214443158](../assets/image-20200522214443158.png)
 
-2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
+#### 2. Vanishing gradients
+Gradient becomes near zero when the discriminator is powerful.[^6]
 
-3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
+#### 3. Training instability
+Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
 
 In the following post we will see *why* mode dropping may happen.
 
