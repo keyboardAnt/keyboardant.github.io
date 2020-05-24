@@ -47,7 +47,7 @@ GANs suffer from three major problems:[^3][^4]
    > More generally, can be visualised as:[^3]
    >![image-20200522214443158](../assets/image-20200522214443158.png)
 
-2. *Vanishing gradients*: Gradient becomes near zero when the discriminator is powerful.[^6]
+2. *Vanishing gradients*: Gradient becomes near zero when the discriminator is powerful.[^6] (click [here](/vanishing-gradient-problem-in-gans) for more)
 
 3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
 
