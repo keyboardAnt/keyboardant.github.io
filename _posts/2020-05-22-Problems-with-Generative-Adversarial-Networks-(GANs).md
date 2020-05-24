@@ -68,9 +68,7 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 
 ## Why mode dropping is such a significant drawback of GANs?
 
-### Why do we care about mode dropping?
-
-
+Because...
 
 ### Why GANs suffer from mode dropping?
 
