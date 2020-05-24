@@ -9,9 +9,9 @@ typora-copy-images-to: ../assets
 
 ![image-20200523162622596](../assets/image-20200523162622596.png)
 
-***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](#why-mode-dropping-is-such-a-significant-drawback-of-gans), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](/mode-dropping-problem-in-gans), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
 
-GLANN is a combination of two methods; it uses [IMLE](what-is-imle) to sample from [GLO embeddings](what-is-glo).
+GLANN is a combination of two methods; it uses [IMLE](#what-is-imle) to sample from [GLO embeddings](#what-is-glo).
 
 GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik[^9]; Later, with an additional author, Ke Li, it got published in CVPR 2019[^11].
 
@@ -39,15 +39,15 @@ GANs suffer from three major problems:[^3][^4]
 
 1. *Mode dropping* (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution. When a GAN suffer from mode dropping, it means that the GAN does *not* generalised the underlying true data distribution.[^5]
 
-   In the following post we will see *why* mode dropping is such a significant drawback of GANs.
-
    > Visualised explanation of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
    >
    > More generally, can be visualised as:[^3]
    >![image-20200522214443158](../assets/image-20200522214443158.png)
+   
+   To better understand why mode dropping is such a significant drawback of GANs, and why it happens - see [my blogpost](/mode-dropping-problem-in-gans).
 
-2. *Vanishing gradients*: Gradient becomes near zero when the discriminator is powerful.[^6] (click [here](/vanishing-gradient-problem-in-gans) for more)
+2. *Vanishing gradients*: Gradient becomes near zero when the discriminator is powerful.[^6]For more explanations, see [my blogpost](/vanishing-gradient-problem-in-gans).
 
 3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
 
@@ -67,18 +67,6 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 > [StyleGAN](https://arxiv.org/pdf/1912.04958.pdf)
 > <img src="../assets/1*k0saXyvLxLlvamYFbussUA.gif" alt="img" style="zoom:50%;" />
 > [pix2pixHD](https://tcwang0509.github.io/pix2pixHD/)
-
-## Why mode dropping is such a significant drawback of GANs?
-
-Because...
-
-### Why GANs suffer from mode dropping?
-
-
-
-### A possible solution
-
-
 
 ## What is IMLE?
 
