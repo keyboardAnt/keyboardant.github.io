@@ -86,7 +86,7 @@ Because...
 
 >  ![img](../assets/glo.png)
 >
-> Figure from https://github.com/clvrai/Generative-Latent-Optimization-Tensorflow.
+> Figure from [a GLO TensorFlow implementation repository on GitHub](https://github.com/clvrai/Generative-Latent-Optimization-Tensorflow).
 
 ## What is GLANN?
 
