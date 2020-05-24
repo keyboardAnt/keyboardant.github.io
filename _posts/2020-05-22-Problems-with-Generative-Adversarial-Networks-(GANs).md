@@ -9,7 +9,7 @@ typora-copy-images-to: ../assets
 
 ![image-20200523162622596](../assets/image-20200523162622596.png)
 
-***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](#why-gans-suffer-from-mode-collapse), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](#why-mode-dropping-is-such-a-significant-drawback-of-gans), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
 
 GLANN is a combination of two methods; it uses [IMLE](what-is-imle) to sample from [GLO embeddings](what-is-glo).
 
