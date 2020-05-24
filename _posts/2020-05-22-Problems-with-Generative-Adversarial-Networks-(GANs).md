@@ -37,7 +37,7 @@ Since GANs were first introduced in 2014[^1], new implementations, methods and d
 
 GANs suffer from three major problems[^3][^4]:
 
-1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution.
+1. *Mode dropping*[^5] (AKA *mode collapse*): In practice GANs might generate only a proper subset of the desired outputs variety, ignoring modes of the underlying true data distribution. When a GAN suffer from mode dropping, it means that the GAN does *not* generalised the underlying true data distribution. In the following post we will see *why* mode dropping is such a significant drawback of GANs.
 
    > Visualised explanation of **mode dropping**:
    > ![image-20200522215210097](../assets/image-20200522215210097.png) 
@@ -48,8 +48,6 @@ GANs suffer from three major problems[^3][^4]:
 2. *Vanishing gradients*[^6]: Gradient becomes near zero when the discriminator is powerful.
 
 3. *Training instability*: Adversarial settings require [minimax optimization](https://en.wikipedia.org/wiki/Minimax), which can only be done heuristically. It might make the training process unreproducible in practice.
-
-In the following post we will see [*why* mode dropping may happen](#why-gans-suffer-from-mode-collapse).
 
 ### Solutions
 
@@ -68,7 +66,17 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 > <img src="../assets/1*k0saXyvLxLlvamYFbussUA.gif" alt="img" style="zoom:50%;" />
 > [pix2pixHD](https://tcwang0509.github.io/pix2pixHD/)
 
-## Why GANs suffer from mode collapse?
+## Why mode dropping is such a significant drawback of GANs?
+
+### Why do we care about mode dropping?
+
+
+
+### Why GANs suffer from mode dropping?
+
+
+
+### A possible solution
 
 
 
@@ -78,7 +86,9 @@ When IMLE is combined with a different method called *GLO*[^8], the combined mod
 
 ## What is GLO?
 
-
+>  ![img](../assets/glo.png)
+>
+> Figure from https://github.com/clvrai/Generative-Latent-Optimization-Tensorflow.
 
 ## What is GLANN?
 
