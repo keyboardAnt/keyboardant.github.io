@@ -7,7 +7,10 @@ comments: true
 typora-copy-images-to: ../assets
 ---
 
-Short intro. What is it, and why we care? Outline.
+Despite their popularity, a well-documented issue in practice apparently contradict theoretical guarantees.
+This is one reason (out of a few, covered in separated blogposts) why **we all should think twice before choosing to use GANs**.
+
+<img src="../assets/1200px-Achtung.svg.png" alt="Danger - Simple English Wikipedia, the free encyclopedia" style="zoom: 25%;" />
 
 ## What is *mode dropping* (*mode collapse*)?
 
