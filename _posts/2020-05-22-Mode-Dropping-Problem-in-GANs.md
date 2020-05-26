@@ -40,15 +40,23 @@ As a result, the "quantity" of mode dropping is typically not measured. This is 
 
 ## Why GANs suffer from mode dropping?
 
-### Theoretical guarantees does *not* hold in practice?
+### Mode dropping supposedly contradicts the theory
 
-In theory it has been shown that minimising the original GAN objective *do* force the model to learn the true data distribution (which can be thought of as minimising the Jensen-Shannon divergence between ). 
+Theoreticians showed that GANs do *not* expected to suffer from mode dropping.[^1] 
+They showed that minimising the (original paper's) GAN objective *do* force the model to learn the true data distribution (which can be thought of as minimising the [Jensen-Shannon divergence]([https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)) between ① the *model* distribution, and ② the *true* data distribution).[^1]
 
-How is it possible?
+Is it possible that theoretical guarantees do *not* hold in practice?
 
-## A possible solution
+### Theoretical assumptions do *not* hold in practice
 
-IMLE
+The reason for the mode dropping phenomenon (which supposedly contradicts the theoretical guarantees) is that theoretical results rely on unrealistic assumptions, including:[^4]
+
+1. The discriminator must have infinite modelling capacity.
+2. The number of samples from the true data distribution must be infinite.
+
+## An alternative for GANs
+
+A non-adversarial generative model, named ***GLANN***, solves the mode dropping problem (as well as the [vanishing gradient problem](/vanishing-gradient-problem-in-gans)). GLANN empirically has been shown to outperform a baseline consisting of 800 GANs and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. For more, see my blogpost [What is GLANN?](/what-is-glann).
 
 ## References
 * "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, 2018, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
@@ -57,3 +65,5 @@ IMLE
 [^1]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, 2018, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
 [^2]: "Overcoming Mode Collapse and the Curse of Dimensionality" IAS Workshop, Ke Li, 2019, [https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view](https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view)
 [^3]:"Unrolled Generative Adversarial Networks", Luke Metz, Ben Poole and David Pfau, 2017, [https://arxiv.org/pdf/1611.02163.pdf](https://arxiv.org/pdf/1611.02163.pdf)
+
+[^4]: "Implicit Maximum Likelihood Estimation", Ke Li and Jitendra Malik, 2018, https://arxiv.org/abs/1809.09087
