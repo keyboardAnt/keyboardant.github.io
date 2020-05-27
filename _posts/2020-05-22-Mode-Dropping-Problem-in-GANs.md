@@ -7,7 +7,7 @@ comments: true
 typora-copy-images-to: ../assets
 ---
 
-Despite their popularity, a well-documented issue in practice apparently contradict theoretical guarantees.
+Despite GANs' popularity, a well-documented problem in practice apparently contradict theoretical guarantees. This problem is called  *mode dropping* (or *mode collapse*).
 This is one reason (out of a few, covered in separated blogposts) why **we all should think twice before choosing to use GANs**.
 
 <img src="../assets/1200px-Achtung.svg.png" alt="Danger - Simple English Wikipedia, the free encyclopedia" style="zoom: 25%;" />
