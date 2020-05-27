@@ -43,14 +43,14 @@ As a result, the "quantity" of mode dropping is typically not measured. This is 
 
 ## Why GANs suffer from mode dropping?
 
-### Mode dropping supposedly contradicts the theory
+### Mode dropping *supposedly* contradicts the theory
 
 Theoreticians showed that GANs do *not* expected to suffer from mode dropping.[^1] 
 They showed that minimising the (original paper's) GAN objective *do* force the model to learn the true data distribution (which can be thought of as minimising the [Jensen-Shannon divergence]([https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)) between ① the *model* distribution, and ② the *true* data distribution).[^1]
 
 Is it possible that theoretical guarantees do *not* hold in practice?
 
-### Theoretical assumptions do *not* hold in practice
+### Theoretical *assumptions* do *not* hold in practice
 
 The reason for the mode dropping phenomenon (which supposedly contradicts the theoretical guarantees) is that theoretical results rely on unrealistic assumptions, including:[^4]
 
