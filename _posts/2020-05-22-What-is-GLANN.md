@@ -9,21 +9,24 @@ typora-copy-images-to: ../assets
 
 ![image-20200523162622596](../assets/image-20200523162622596.png)
 
-***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (mode collapse) like GANs](/mode-dropping-problem-in-gans), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
+***GLANN*** is a novel method to train [generative models](https://en.wikipedia.org/wiki/Generative_model). It was shown empirically that GLANN outperform a baseline consisting of 800 [GANs]([https://en.wikipedia.org/wiki/Generative_adversarial_network](https://en.wikipedia.org/wiki/Generative_adversarial_network)) and [VAEs](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) on commonly used datasets. Moreover, GLANN doesn't suffer from [*mode dropping* (*mode collapse*) like GANs](/mode-dropping-problem-in-gans), and is trained without adversarial, which makes the training process simpler and more *stable* than GANs. 
 
 GLANN is a combination of two methods; it uses [IMLE](#what-is-imle) to sample from [GLO embeddings](#what-is-glo).
 
+>  <img src="../assets/image-20200527131940130.png" alt="image-20200527131940130" style="zoom:25%;" />
+
 GLANN was first introduced on December 2018, in a paper by Yedid Hoshen and Jitendra Malik[^9]; Later, with an additional author, Ke Li, it got published in CVPR 2019[^11].
 
->Empirical benchmark showed GLANN's superiority over GANs and VAEs, in both quality and diversity of the results (presented in GLANN's paper):
+>Empirical benchmark showed GLANN's superiority over GANs and VAEs. 
+>GLANN's results measured to have better [quality ("Precision") and diversity ("Recall")](https://en.wikipedia.org/wiki/F1_score):[^11]
 >
 >![image-20200523132812272](../assets/image-20200523132812272.png)
 >
->Example of quality high-resolution outputs of GLANN:
+>Example of quality high-resolution outputs of GLANN:[^11]
 >
 >![image-20200523134153792](../assets/image-20200523134153792.png)
 >
->GLANN works for various tasks:
+>GLANN works for various tasks:[^11]
 >
 >![image-20200523134234853](../assets/image-20200523134234853.png)
 
@@ -45,7 +48,7 @@ GANs suffer from three major problems:[^3][^4]
    > More generally, can be visualised as:[^3]
    >![image-20200522214443158](../assets/image-20200522214443158.png)
    
-   To better understand why mode dropping is such a significant drawback of GANs, and why it happens - see [my blogpost](/mode-dropping-problem-in-gans).
+   Why mode dropping is such a significant drawback of GANs? Why it happens? See [my blogpost](/mode-dropping-problem-in-gans).
 
 2. *Vanishing gradients*: Gradient becomes near zero when the discriminator is powerful.[^6]For more explanations, see [my blogpost](/vanishing-gradient-problem-in-gans).
 
