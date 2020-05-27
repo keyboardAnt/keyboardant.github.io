@@ -52,7 +52,7 @@ Is it possible that theoretical guarantees do *not* hold in practice?
 
 ### Theoretical *assumptions* do *not* hold in practice
 
-The reason for the mode dropping phenomenon (which *supposedly* contradicts the theoretical guarantees) is that theoretical results rely on unrealistic assumptions, including:[^4]
+The reason for the mode dropping phenomenon (which *supposedly* contradicts the theoretical guarantees) is that theoretical results rely on *unrealistic* assumptions, including:[^4]
 
 1. The discriminator must have infinite modelling capacity.
 2. The number of samples from the true data distribution must be infinite.
