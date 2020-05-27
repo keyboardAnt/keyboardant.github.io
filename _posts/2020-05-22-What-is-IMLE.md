@@ -11,13 +11,15 @@ Why do we care?
 
 ## What is IMLE?
 
-A solution for *mode dropping* (*mode collapse*) problem in GANs.
+*IMLE* is a generative model that maximise likelihood. IMLE solves: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [vanishing gradient problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans). In practice IMLE synthesises blurry images. Nevertheless, IMLE has its own strengths; it is utilised as a component of [a novel generative model that outperforms VAEs and GANs (named GLANN)](/what-is-glann).
 
-a method from 2018 that solves all three problems mentioned above
+IMLE stands for *Implicit Maximum Likelihood Estimation*, since it deals with *implicit* probabilistic models (like deep neural networks).
 
-This method is named *Implicit Maximum Likelihood Estimation (IMLE)*[^7].
+It was proposed on 2018, by Ke Li and Jitendra Malik.
 
 ## How IMLE works?
+
+
 
 ## IMLE drawbacks
 
