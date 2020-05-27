@@ -2,7 +2,7 @@
 layout: post
 title: "What is GLANN?"
 permalink: what-is-glann
-date: May 22, 2020
+date: May 27, 2020
 comments: true
 typora-copy-images-to: ../assets
 ---
