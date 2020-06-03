@@ -11,9 +11,9 @@ Why do we care?
 
 ## What is IMLE?
 
-*IMLE* is a generative model that maximize likelihood. IMLE solves: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [*vanishing gradient* problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans). In practice IMLE synthesizes blurry images. Nevertheless, IMLE has its own strengths; it is utilised as a component of [a novel generative model that outperforms VAEs and GANs (named GLANN)](/what-is-glann).[^1]
+*IMLE* is a method to do [maximum likelihood estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) for an *implicit* generative model (like [artificial neural network](https://en.wikipedia.org/wiki/Artificial_neural_network)).
 
-IMLE stands for *Implicit Maximum Likelihood Estimation*, since it deals with *implicit* probabilistic models (like deep neural networks).
+In contrast to [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network), a generative model that has been trained using IMLE does *not* suffer from: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [*vanishing gradient* problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans). In practice IMLE model synthesizes blurry images. Nevertheless, IMLE has its own strengths; it is utilised as a component of [a novel generative model that outperforms VAEs and GANs (named GLANN)](/what-is-glann).[^1]
 
 IMLE was proposed on 2018, by Ke Li and Jitendra Malik.[^2]
 
@@ -24,11 +24,11 @@ The [maximum likelihood estimator (MLE)](https://en.wikipedia.org/wiki/Maximum_l
 
 All of the above can explain why maximum likelihood is perhaps the standard method for estimating the parameters of a probabilistic model from observations.[^2]
 
-## Likelihood maximization in deep generative models (like GANs)
+## Maximum likelihood estimation (MLE) in deep learning
 
-### Why maximizing likelihood is not trivial for deep generative models (like GANs)?
+### Why MLE is not trivial for deep generative models (like GANs)?
 
-Because deep neural networks (like GANs) are *implicit* probabilistic models. Their likelihood function considered to be too complicated to express/evaluate.
+Because deep generative models (neural networks like GANs) are *implicit* probabilistic models. Their likelihood function considered to be too complicated to express/evaluate.
 
 #### *Prescribed* vs *Implicit* models
 
