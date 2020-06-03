@@ -34,7 +34,7 @@ GANs are based on the idea of minimizing the distinguishability between data and
 
 Despite the theoretical results, there are a number of challenges that arise in practice, such as ① [mode dropping/collapse](/mode-dropping-problem-in-gans), ② [vanishing gradients](vanishing-gradient-problem-in-gans) and ③ [training instability](/training-instability-problem-in-gans).[^2]
 
-##### Why those problems occure in practice?
+##### Why those problems occur in practice?
 
 A number of explanations have been proposed to explain these phenomena and point out that many theoretical results rely on assumptions that does *not* holds in practice (for example, that the number of samples from the true data distribution must be infinite).[^2] For more details on those three problems, read my blogposts (link above).
 
