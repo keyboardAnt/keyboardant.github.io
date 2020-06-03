@@ -51,7 +51,7 @@ are defined most naturally in terms of a (simple) sampling procedure. Most model
 
 According to Li and Malik, in general, attempting to reduce the marginal likelihood of an implicit model to a closed-form expression is hopeless. Evaluating it numerically is also challenging, since the domain of integration could consist of an exponential number of disjoint regions and numerical differentiation is ill-conditioned.[^2]
 
-### GANs alternative learning approach: minimizing the objective will minimize an $f$-divergence between data and samples
+### GANs likelihood-free learning approach: minimizing the objective will minimize an $f$-divergence between data and samples
 
 Instead of maximizing likelihood, GANs took a different learning approach:
 
