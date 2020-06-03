@@ -32,7 +32,7 @@ Because deep neural networks (like GANs) are *implicit* probabilistic models. Th
 
 #### *Prescribed* vs *Implicit* models
 
-Generative models can be classified into two (not disjoint*) categories:[^2]
+Generative models can be classified into two (not disjoint[^4]) categories:[^2]
 
 ##### *Prescribed* models
 
@@ -46,8 +46,6 @@ are defined most naturally in terms of a (simple) sampling procedure. Most model
   >
   > 1. Sample $z ∼ N(0,I)$
   > 2. Return $x := T_θ(z)$ 
-
-> *Some models admit both an explicit specification of the density and a simple sampling procedure and so can be considered as both prescribed and implicit. Examples include [variational autoencoders (VAE)](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73).[^2]
 
 ###### Likelihood of an implicit model
 
@@ -94,3 +92,5 @@ Can be combined with other methods to outperform GANs (GLANN)
 [^1]: "Overcoming Mode Collapse and the Curse of Dimensionality" IAS Workshop, Ke Li, 2019, [https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view](https://drive.google.com/file/d/1PV4YN3OQprww4BCDwB9XWMUIz_mbdDab/view)
 [^2]: "Implicit Maximum Likelihood Estimation", Ke Li and Jitendra Malik, 2018, [https://arxiv.org/abs/1809.09087](https://arxiv.org/abs/1809.09087)
 [^3]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, 2018, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
+
+[^4]: Some models admit both an explicit specification of the density and a simple sampling procedure and so can be considered as both prescribed and implicit. Examples include [variational autoencoders (VAE)](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73).[^2]
