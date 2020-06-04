@@ -112,7 +112,7 @@ In each outer iteration, we draw $m$ i.i.d. samples from the current model $P_θ
   * Initialize $θ$ to a random vector
   * **For** $k = 1$ **to** $K$ **do**
     * Draw i.i.d. samples $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ from $P_\theta$
-    * Pick a random batch $S ⊆ \{1, \ldots , n\}$
+    * Pick a random batch $$S ⊆ \{1, \ldots , n\}$$
     * $σ(i) ← \arg \min_j \|\tilde{x}^θ_i - \tilde{x}^θ_j\|_2^2, ∀i ∈ S$
     * **For** $l = 1$ **to** $L$ **do**
       * Pick a random mini-batch $\tilde S ⊆ S$
