@@ -86,18 +86,19 @@ To make the above happen, we can simply adjust the parameters of the model so th
 #### Formal definition
 
 We are given a set of $n$ data examples $x_1, \ldots , x_n$ and some unknown parameterized probability distribution $P_θ$ with density $p_θ$. We also have access to an oracle that allows us to draw independent and identically distributed (i.i.d.) samples from $P_θ$. Let $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ be i.i.d. samples from $P_θ$, where $m \ge n$. For each data example $x_i$ , we define a random variable $R^θ_i$ to be the distance between $x_i$ and the nearest sample. More precisely,
+
 $$
 R^θ_i := \min_{j \in [m]} \|\tilde{x}^θ_j - \tilde{x}^θ_i\|_2^2
 $$
+
 The implicit maximum likelihood estimator $\hat{θ}_{IMLE}$ is defined as:
+
 $$
 \begin{split}
 \hat{θ}_{IMLE} &:= \arg \min_\theta \mathbb{E}_{R^θ_1, \ldots, R^θ_n} \left[ \sum_{i=1}^n R^θ_i \right] \\
 &= \arg \min_\theta \mathbb{E}_{\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m} \left[ \sum_{i=1}^n \min_{j \in [m]} \|\tilde{x}^θ_j - \tilde{x}^θ_i\|_2^2 \right]
 \end{split}
 $$
-
-
 
 ### Algorithm
 
