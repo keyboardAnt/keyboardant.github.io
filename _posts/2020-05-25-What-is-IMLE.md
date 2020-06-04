@@ -11,7 +11,7 @@ Why do we care?
 
 ## What is IMLE?
 
-*IMLE* is a method to do [maximum likelihood estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) for an *implicit* generative model (like [artificial neural network](https://en.wikipedia.org/wiki/Artificial_neural_network)).
+*IMLE* is a likelihood-free method to do [maximum likelihood estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) in *implicit* generative models (like [artificial neural networks](https://en.wikipedia.org/wiki/Artificial_neural_network)).
 
 In contrast to [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network), a generative model that has been trained using IMLE does *not* suffer from: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [*vanishing gradient* problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans). In practice IMLE model synthesizes blurry images. Nevertheless, IMLE has its own strengths; it is utilised as a component of [a novel generative model that outperforms VAEs and GANs (named GLANN)](/what-is-glann).[^1]
 
@@ -53,7 +53,7 @@ According to Li and Malik, in general, attempting to reduce the marginal likelih
 
 ### GANs likelihood-free learning approach: minimizing the objective will minimize an $f$-divergence between data and samples
 
-Instead of maximizing likelihood, GANs took a different learning approach:
+Instead of maximizing likelihood directly, GANs took a different learning approach:
 
 #### Learning goal
 
@@ -71,7 +71,31 @@ Despite the theoretical results, there are a number of challenges that arise in 
 
 A number of explanations have been proposed to explain these phenomena and point out that many theoretical results rely on assumptions that does *not* holds in practice (for example, that the number of samples from the true data distribution must be infinite).[^2] For more details on those three problems, read my blogposts (link above).
 
-## How IMLE works?
+## IMLE key ideas
+
+### Likelihood-free method that maximize likelihood
+
+As mentioned, IMLE is a likelihood-free method to do [maximum likelihood estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) in implicit generative models. Although IMLE is likelihood-free, it has been shown that IMLE is equivalent to maximizing likelihood (under some conditions).
+
+IMLE holds when the capacity of the model is finite and the number of data examples is finite, as we expect to have in practice.[^2]
+
+### Observation: How does maximum likelihood look like?
+
+IMLE relies on the following observation: a model distribution that maximizes the likelihood of the data should assign high density to each of the data examples, and so if samples were drawn from the model, samples would be more likely to lie near data examples than elsewhere.[^2]
+
+### Objective
+
+To make the above happen, we can simply adjust the parameters of the model so that each data example is close to some sample.
+
+## IMLE vs GANs
+
+### IMLE learning approach vs GANs learning approach
+
+Intuitively, IMLE learning approach is the opposite of [GANs learning approach](#gans-likelihood-free-learning-approach:-minimizing-the-objective-will-minimize-an-$f$-divergence-between-data-and-samples).
+
+GANs learning approach is to minimize the distinguishability between data and samples; It ensures that each sample is close to some data example. But some data examples may not be chosen by any sample, resulting in [mode dropping](/mode-dropping-problem-in-gans).[^2]
+
+### Main achievements: IMLE does *not* suffer from ① mode dropping, ② vanishing gradient, and ③ training instability
 
 
 
