@@ -7,10 +7,6 @@ comments: true
 typora-copy-images-to: ../assets
 ---
 
-Why do we care?
-
-## What is IMLE?
-
 *IMLE* is a likelihood-free method to do [maximum likelihood estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) in *implicit* generative models (like [artificial neural networks](https://en.wikipedia.org/wiki/Artificial_neural_network)).
 
 In contrast to [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network), a generative model that has been trained using IMLE does *not* suffer from: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [*vanishing gradient* problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans). In practice IMLE model synthesizes blurry images. Nevertheless, IMLE has its own strengths; it is utilised as a component of [a novel generative model that outperforms VAEs and GANs (named GLANN)](/what-is-glann).[^1]
