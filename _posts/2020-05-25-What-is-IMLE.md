@@ -57,7 +57,7 @@ GANs are based on the idea of minimizing the distinguishability between data and
 
 #### Theoretical guarantees
 
-It has been shown that when given access to an infinitely powerful discriminator, the GAN objective *minimizes* a few instances of [$f$-divergences](https://en.wikipedia.org/wiki/F-divergence).[^2]
+It has been shown that when given access to an infinitely powerful discriminator, the GAN objective *minimizes* a few instances of [*f*-divergences](https://en.wikipedia.org/wiki/F-divergence).[^2]
 
 #### Problems in practice
 
