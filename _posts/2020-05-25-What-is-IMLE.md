@@ -106,21 +106,21 @@ IMLE works by drawing samples from the model, finding the nearest sample to ever
 
 In each outer iteration, we draw $m$ i.i.d. samples from the current model $P_θ$. We then randomly select a batch of examples from the dataset, and find the nearest sample from each data example. We then run a standard iterative optimization algorithm, like [stochastic gradient descent (SGD)](https://en.wikipedia.org/wiki/Stochastic_gradient_descent), to minimize a sample-based version of the IMLE objective.
 
-> **Require:**
->     The dataset $ D=\{x_i\}_{i=1}^n $ and a sampling mechanism for the implicit model $P_\theta$.
->
-> **Algorithm:**
->     Initialize $θ$ to a random vector
->     For** $k = 1$ **to** $K$ **do**
->             Draw i.i.d. samples $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ from $P_\theta$
->             Pick a random batch $S ⊆ \{1, \ldots , n\}$
->             $σ(i) ← \arg \min_j \|\tilde{x}^θ_i - \tilde{x}^θ_j\|_2^2, ∀i ∈ S$
->             **For** $l = 1$ **to** $L$ **do**
->                     Pick a random mini-batch $\tilde S ⊆ S$
->                     $θ ← θ − η∇_θ \left( \frac n {|\tilde S|} \sum_{i \in \tilde S} \|\tilde{x}^θ_i - \tilde{x}^θ_{\sigma(i)}\|_2^2 \right)$
->             **End for**
->     **End For**
->     **Return** $\theta$
+**Require:**
+ The dataset $D=\{x_i\}_{i=1}^n$ and a sampling mechanism for the implicit model $P_\theta$.
+
+**Algorithm:**
+ Initialize $θ$ to a random vector
+ For** $k = 1$ **to** $K$ **do**
+         Draw i.i.d. samples $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ from $P_\theta$
+         Pick a random batch $S ⊆ \{1, \ldots , n\}$
+         $σ(i) ← \arg \min_j \|\tilde{x}^θ_i - \tilde{x}^θ_j\|_2^2, ∀i ∈ S$
+         **For** $l = 1$ **to** $L$ **do**
+                 Pick a random mini-batch $\tilde S ⊆ S$
+                 $θ ← θ − η∇_θ \left( \frac n {|\tilde S|} \sum_{i \in \tilde S} \|\tilde{x}^θ_i - \tilde{x}^θ_{\sigma(i)}\|_2^2 \right)$
+         **End for**
+ **End For**
+ **Return** $\theta$
 
 ##### Time complexity
 
