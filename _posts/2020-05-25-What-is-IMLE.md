@@ -117,9 +117,9 @@ In each outer iteration, we draw $m$ i.i.d. samples from the current model $P_θ
     * **For** $l = 1$ **to** $L$ **do**
       * Pick a random mini-batch $\tilde S ⊆ S$
       * $θ ← θ − η∇_θ \left( \frac n {|\tilde S|} \sum_{i \in \tilde S} \|\tilde{x}^θ_i - \tilde{x}^θ_{\sigma(i)}\|_2^2 \right)$
-* **End for**
-* **End For**
-* **Return** $\theta$
+    * **End for**
+  * **End For**
+  * **Return** $\theta$
 
 ##### Time complexity
 
