@@ -142,11 +142,11 @@ In contrast to [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_netwo
 
 ## IMLE drawbacks
 
-Unfortunately in practice synthesizes blurry images[^9].
+Unfortunately, in practice models that are trained via IMLE synthesize blurry images.[^5]
 
 ## Improvements that outperform GANs
 
-Can be combined with other methods to outperform GANs (GLANN)
+A method that outperforms GANs use IMLE as a component (together with an additional method, called [GLO](/what-is-glo)). The method is named [GALNN](/what-is-glann).
 
 > <img src="../assets/image-20200527131940130.png" alt="image-20200527131940130" style="zoom:25%;" />
 
@@ -159,3 +159,5 @@ Can be combined with other methods to outperform GANs (GLANN)
 [^3]: "On the Implicit Assumptions of GANs", Ke Li and Jitendra Malik, 2018, [https://arxiv.org/abs/1811.12402](https://arxiv.org/abs/1811.12402)
 
 [^4]: Some models admit both an explicit specification of the density and a simple sampling procedure and so can be considered as both prescribed and implicit. Examples include [variational autoencoders (VAE)](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73).[^2]
+[^5]: "Non-Adversarial Image Synthesis with Generative Latent Nearest Neighbors", Yedid Hoshen and Jitendra Malik, [https://arxiv.org/abs/1812.08985](https://arxiv.org/abs/1812.08985)
+
