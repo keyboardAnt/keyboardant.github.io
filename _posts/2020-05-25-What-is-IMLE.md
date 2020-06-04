@@ -107,7 +107,7 @@ IMLE works by drawing samples from the model, finding the nearest sample to ever
 In each outer iteration, we draw $m$ i.i.d. samples from the current model $P_θ$. We then randomly select a batch of examples from the dataset, and find the nearest sample from each data example. We then run a standard iterative optimization algorithm, like [stochastic gradient descent (SGD)](https://en.wikipedia.org/wiki/Stochastic_gradient_descent), to minimize a sample-based version of the IMLE objective.
 
 * **Require:**
-  The dataset $D=\{x_i\}^n_{i=1}$ and a sampling mechanism for the implicit model $P_\theta$.
+  The dataset $$D=\{x_i\}^n_{i=1}$$ and a sampling mechanism for the implicit model $P_\theta$.
 * **Algorithm:**
   * Initialize $θ$ to a random vector
   * **For** $k = 1$ **to** $K$ **do**
