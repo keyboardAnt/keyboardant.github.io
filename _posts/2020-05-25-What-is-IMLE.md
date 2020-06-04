@@ -79,9 +79,51 @@ IMLE holds when the capacity of the model is finite and the number of data examp
 
 IMLE relies on the following observation: a model distribution that maximizes the likelihood of the data should assign high density to each of the data examples, and so if samples were drawn from the model, samples would be more likely to lie near data examples than elsewhere.[^2]
 
-### Objective
+### Objective function
 
 To make the above happen, we can simply adjust the parameters of the model so that each data example is close to some sample.
+
+#### Formal definition
+
+We are given a set of $n$ data examples $x_1, \ldots , x_n$ and some unknown parameterized probability distribution $P_θ$ with density $p_θ$. We also have access to an oracle that allows us to draw independent and identically distributed (i.i.d.) samples from $P_θ$. Let $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ be i.i.d. samples from $P_θ$, where $m \ge n$. For each data example $x_i$ , we define a random variable $R^θ_i$ to be the distance between $x_i$ and the nearest sample. More precisely,
+$$
+R^θ_i := \min_{j \in [m]} \|\tilde{x}^θ_j - \tilde{x}^θ_i\|_2^2
+$$
+The implicit maximum likelihood estimator $\hat{θ}_{IMLE}$ is defined as:
+$$
+\begin{split}
+\hat{θ}_{IMLE} &:= \arg \min_\theta \mathbb{E}_{R^θ_1, \ldots, R^θ_n} \left[ \sum_{i=1}^n R^θ_i \right] \\
+&= \arg \min_\theta \mathbb{E}_{\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m} \left[ \sum_{i=1}^n \min_{j \in [m]} \|\tilde{x}^θ_j - \tilde{x}^θ_i\|_2^2 \right]
+\end{split}
+$$
+
+
+
+### Algorithm
+
+IMLE works by drawing samples from the model, finding the nearest sample to every data example and adjusting the parameters of the model so that it is closer to the data example.
+
+In each outer iteration, we draw $m$ i.i.d. samples from the current model $P_θ$. We then randomly select a batch of examples from the dataset, and find the nearest sample from each data example. We then run a standard iterative optimization algorithm, like [stochastic gradient descent (SGD)](https://en.wikipedia.org/wiki/Stochastic_gradient_descent), to minimize a sample-based version of the IMLE objective.
+
+>**Require:**
+>	The dataset $D=\{x_i\}_{i=1}^n$ and a sampling mechanism for the implicit model $P_\theta$.
+>
+>**Algorithm:**
+>	Initialize $θ$ to a random vector
+>	**For** $k = 1$ **to** $K$ **do**
+>			Draw i.i.d. samples $\tilde{x}^θ_1,\ldots, \tilde{x}^θ_m$ from $P_\theta$
+>			Pick a random batch $S ⊆ \{1, \ldots , n\}$
+>			$σ(i) ← \arg \min_j \|\tilde{x}^θ_i - \tilde{x}^θ_j\|_2^2, ∀i ∈ S$
+>			**For** $l = 1$ **to** $L$ **do**
+>					Pick a random mini-batch $\tilde S ⊆ S$
+>					$θ ← θ − η∇_θ \left( \frac n {|\tilde S|} \sum_{i \in \tilde S} \|\tilde{x}^θ_i - \tilde{x}^θ_{\sigma(i)}\|_2^2 \right)$
+>			**End for**
+>	**End For**
+>	**Return** $\theta$
+
+##### Time complexity
+
+Because the algorithm needs to solve a [nearest neighbour search](https://en.wikipedia.org/wiki/Nearest_neighbor_search) problem in each outer iteration (i.e. calculating $\sigma(i)$), the scalability of our method depends on the ability to find the nearest neighbours quickly. This was traditionally considered to be a hard problem, especially in high dimensions. However, this is no longer the case, due to recent advances in nearest neighbour search algorithms, which avoid the curse of dimensionality in time complexity that often arises in nearest neighbour search.[^2]
 
 ## IMLE vs GANs
 
@@ -93,7 +135,9 @@ GANs learning approach is to minimize the distinguishability between data and sa
 
 ### Main achievements: IMLE does *not* suffer from ① mode dropping, ② vanishing gradient, and ③ training instability
 
+In contrast to [GANs](https://en.wikipedia.org/wiki/Generative_adversarial_network), a generative model that has been trained using IMLE does *not* suffer from: ① the [*mode dropping* (*mode collapse*) problem in GANs](/mode-dropping-problem-in-gans); ② the [*vanishing gradient* problem in GANs](/vanishing-gradient-problem-in-gans); and ③ the [training instability problem in GANs](/training-instability-problem-in-gans).
 
+① Modes are not dropped because the loss ensures each data example has a sample nearby at optimality; ② gradients do not vanish because the gradient of the distance between a data example and its nearest sample does not become zero unless they coincide; ③ training is stable because the estimator is the solution to a simple minimization problem.[^2]
 
 ## IMLE drawbacks
 
