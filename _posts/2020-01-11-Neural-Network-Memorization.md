@@ -39,7 +39,7 @@ However, \[BELM20\] constructed the Baum network “by hand”: given a general 
 
 ### (ii) Learning to Memorize via gradient methods Over a *Randomly Initialized* Single Hidden Layer ReLU Network: When Is It Computationally Efficient?
 
-Consider a *randomly initialized* (e.g., as in Xavier) neural network with non-polynomial activation function (e.g., single hidden layer ReLU network). Can a gradient method (e.g., GD) reach a global minimum (in which the loss provably vanishes) in polynomial time complexity (w.r.t. $n$ and $d$, the number of samples in the training set and their dimension, respectively)?
+Consider a *randomly initialized* (e.g., as in Xavier) neural network with non-polynomial activation function (e.g., a single hidden layer ReLU network). Can a gradient method (e.g., GD) reach a global minimum (in which the loss provably vanishes) in polynomial time complexity (w.r.t. $n$ and $d$, the number of samples in the training set and their dimension, respectively)?
 
 A few results proved that as long as the network is sufficiently wide, namely, of width $$\widetilde{\Omega} \left( nd \right)$$, the answer to the previous question is positive for various settings [Sun19, DG19, Dan19, SY19, BELM20, MZ20, OS19, DZPS18, JGH18, BGW20, KH19].
 
