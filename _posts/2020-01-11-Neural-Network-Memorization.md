@@ -25,7 +25,7 @@ When and why does interpolation imply generalization? It is yet another open que
 
 One of the questions people are interested in is: what are a network’s capabilities to memorize a data set? There are currently two kinds of results in the literature, answering the following: (i) what the smallest size of a network required to memorize a given training data set is? Moreover, (ii)—which is the same question as in (i)—but under the assumption of using a standard (i.e., computationally efficient) learning algorithm such as gradient descent (GD)? Our primary goal in this blogpost is to propose studying the current gap between (i) and (ii).
 
-### (i) The Expressive Power of a Single Hidden Layer ReLU Network (a.k.a. Information-Theoretic Bounds): When Is It Theoretically Possible to *Memorize*?
+### The Expressive Power of a Single Hidden Layer ReLU Network (a.k.a. Information-Theoretic Bounds): When Is It Theoretically Possible to *Memorize*?
 
 Positive results show that a sufficiently large neural network is expressive enough in order to ***memorize*** (i.e. interpolate) an arbitrary dataset [YSJ18, HM17, NH18, Ver20, KH19]. Formally, ***memorizing*** a dataset $$\left\{ \left( x_i, y_i \right) \right\}_{i=1}^{n}$$ (where no two $x_i$ are the same) by a neural network $$f_{w} : \mathbb{R}^{d} \to \mathbb{R}$$ (parameterized by $w$) means to satisfy $$f_{w} \left( x_j \right) = y_j$$ for all $$j \in \left\{ 1, 2, \ldots, n \right\}$$. Why is this not a surprise?
 
@@ -37,7 +37,7 @@ Lately, a construction named the *Baum network* has been introduced: a feedforwa
 
 However, \[BELM20\] constructed the Baum network “by hand”: given a general positioned training set of size $n$, they built a network by carefully choosing its parameters. Those specific parameters are unlikely to be found by any known learning algorithm, e.g., GD, whenever the network initialization is random as in Xavier (namely, as in [GB10]). It is not yet clear whether a randomly initialized network of the same architecture that was trained by GD exhausts its own memorization capacity (i.e., will successfully memorize any general positioned training set of size $n$). It raises the open question: what is the smallest size of a network required to memorize a general data set?
 
-### (ii) Learning to Memorize via gradient methods Over a *Randomly Initialized* Single Hidden Layer ReLU Network: When Is It Computationally Efficient?
+### Learning to Memorize via gradient methods Over a *Randomly Initialized* Single Hidden Layer ReLU Network: When Is It Computationally Efficient?
 
 Consider a *randomly initialized* (e.g., as in Xavier) neural network with non-polynomial activation function (e.g., a single hidden layer ReLU network). Can a gradient method (e.g., GD) reach a global minimum (in which the loss provably vanishes) in polynomial time complexity (w.r.t. $n$ and $d$, the number of samples in the training set and their dimension, respectively)?
 
