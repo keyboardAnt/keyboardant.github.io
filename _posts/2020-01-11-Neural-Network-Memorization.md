@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "On Neural Network Memorization"
-permalink: neural-network-memorization
+permalink: on-neural-network-memorization
 date: Jan 11, 2021
 comments: true
 typora-copy-images-to: ../assets
